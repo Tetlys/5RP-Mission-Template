@@ -1,0 +1,31 @@
+Step 1: Unzip the PBO manager, you'll need this later for unpacking and repacking your mission files to make them readable by the server.
+
+Step 2: Navigate your way to the following file:
+
+C:\Users\YOURUSERNAMEHERE\Documents\Arma 3 - Other Profiles\YOURPROFILEHERE\Missions
+
+Step 3: Move the folder "preset" to this directory, this will allow you to open the preset through the 3den editor
+
+Step 4: Open arma using the "Mission Preset" Modpack included in this package. 
+
+Step 5: Open the map, and press 'CTRL+A' To select all items on the map (Optionally you can save all these objects as a custom composition by right clicking and saving the collection for later use) 
+
+Step 6: Open your map of choice for the mission you wish to create
+
+Step 7: Paste the items you just copied from the Mission Preset (Optionally you may remove the white flagpole - this adds the halo jump feature, removing it is as simple as removing the flagpole) 
+
+Step 8: GO WILD! Create the mission you wish to play, if you need a specific mod to be added, for vehicles etc, any mod from the official current modpack may be used at this time, However! Remeber that if this mod is removed from the pack, the mission will be made redundant.
+
+Step 9: Once you have finished creating your mission, theres just a few more steps to have everything working as it should be first, youll need to go to:
+
+Attributes > Multiplayer > Respawn - Set this to 'Respawn On Custom Position' then select the 'Select Respawn Location' 'Select Respawn Loadout' and be sure the box is checked. Then Set tick the disable AI Box, and set the respawn timer to arround 3 seconds.
+
+Step 10: You can now save the mission and return to your mission file. Save As> Name the mission.
+
+Step 11: Open your newly created mission folder in your local missions folder. Now you need to open the Mission preset File on the other side of your screen.
+
+Step 12: Move everything from the MissionPreset.vr into your new mission folder EXCEPT FOR THE MISSION.SQM!!!!!! 
+
+Step 13: Check over everything before hand, you may now use PBO manager to pack the mission into a server readable file. Do this by first having PBO manager installed, and then simply right click on the new mission file > Pbo Managaer > Pack into (Foldername.pbo) 
+
+Step 14: And thats you done! You may now send the PBO to tetlys to be uploaded to the server!

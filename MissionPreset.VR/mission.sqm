@@ -1,0 +1,2856 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=443;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
+	};
+	class Camera
+	{
+		pos[]={787.19855,20.753202,3113.281};
+		dir[]={-0.082263052,-0.41922829,0.90422028};
+		up[]={-0.038000684,0.90785599,0.41755852};
+		aside[]={0.9959538,1.1194068e-005,0.090616949};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"CUP_Misc3_Config",
+	"A3_Characters_F",
+	"A3_Modules_F_Curator_Curator",
+	"A3_Ui_F",
+	"CUP_Misc_e_Config",
+	"ace_chemlights",
+	"ace_medical_treatment"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=7;
+		class Item0
+		{
+			className="CUP_Misc3_Config";
+			name="CUP_Misc3_Config";
+		};
+		class Item1
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Modules_F_Curator";
+			name="Arma 3 Zeus Update - Scripted Modules";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item3
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item4
+		{
+			className="CUP_Misc_e_Config";
+			name="CUP_Misc_e_Config";
+		};
+		class Item5
+		{
+			className="ace_chemlights";
+			name="ace_chemlights";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+		class Item6
+		{
+			className="ace_medical_treatment";
+			name="ACE3 - Medical Treatment";
+			author="ACE-Team";
+			url="http://ace3mod.com/";
+		};
+	};
+};
+randomSeed=4994041;
+class ScenarioData
+{
+	author="Tetlys";
+	disabledAI=1;
+	respawn=3;
+	class Header
+	{
+		gameType="Zeus";
+	};
+};
+class CustomAttributes
+{
+	class Category0
+	{
+		name="Multiplayer";
+		class Attribute0
+		{
+			property="RespawnTemplates";
+			expression="true";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"ARRAY"
+						};
+					};
+					class value
+					{
+						items=2;
+						class Item0
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuInventory";
+							};
+						};
+						class Item1
+						{
+							class data
+							{
+								class type
+								{
+									type[]=
+									{
+										"STRING"
+									};
+								};
+								value="MenuPosition";
+							};
+						};
+					};
+				};
+			};
+		};
+		nAttributes=1;
+	};
+};
+class Mission
+{
+	class Intel
+	{
+		overviewText="Mission Template";
+		timeOfChanges=1800.0002;
+		startWeather=0;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		wavesForced=1;
+		windForced=1;
+		year=2035;
+		day=28;
+		hour=13;
+		minute=37;
+		startFogDecay=0.014;
+		forecastFogDecay=0.014;
+	};
+	class Entities
+	{
+		items=18;
+		class Item0
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={782.57123,5,3159.073};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				name="carrierjump";
+			};
+			id=328;
+			type="PARACHUTE_TARGET";
+		};
+		class Item1
+		{
+			dataType="Trigger";
+			position[]={782.51501,5,3159.1128};
+			class Attributes
+			{
+				name="TeleporterSafty";
+				condition="call{this}";
+				onActivation="call{player allowDamage false;}";
+				onDeactivation="call{player allowDamage true;}";
+				sizeA=5;
+				sizeB=5;
+				sizeC=10;
+				repeatable=1;
+				activationBy="ANYPLAYER";
+			};
+			id=329;
+			type="EmptyDetector";
+		};
+		class Item2
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={783.33197,5.0014391,3173.2839};
+						angles[]={0,4.7260027,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""CUP_optic_MicroT1""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_m2""; " \n "this addVest ""V_mas_ukl_PlateCarrierLR_rgr""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "this addHeadgear ""H_Cap_khaki_specops_UK""; " \n "this addGoggles ""G_Shades_Blue""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						name="Zeus1";
+						description="[CROSSROADS] Zeus Operator";
+						isPlayable=1;
+					};
+					id=343;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male11ENG";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD',_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="face";
+							expression="_this setface _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="";
+								};
+							};
+						};
+						nAttributes=6;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=330;
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={783.237,5.0014391,3171.9021};
+						angles[]={0,4.7260027,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""CUP_optic_MicroT1""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_m2""; " \n "this addVest ""V_mas_ukl_PlateCarrierLR_rgr""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "this addHeadgear ""H_Cap_khaki_specops_UK""; " \n "this addGoggles ""G_Shades_Blue""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						name="Zeus2";
+						description="[HALBERD] Zeus Operator";
+						isPlayable=1;
+					};
+					id=344;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD',_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=332;
+		};
+		class Item4
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={783.15997,5.0014391,3170.3669};
+						angles[]={0,4.7260027,0};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""CUP_optic_MicroT1""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_m2""; " \n "this addVest ""V_mas_ukl_PlateCarrierLR_rgr""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "this addHeadgear ""H_Cap_khaki_specops_UK""; " \n "this addGoggles ""G_Shades_Blue""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						name="Zeus3";
+						description="[TETRA] Zeus Operator";
+						isPlayable=1;
+					};
+					id=345;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.01;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD',_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=334;
+		};
+		class Item5
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={783.16486,5,3170.2998};
+			};
+			id=336;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Zeus3";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item6
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={783.27124,5,3171.845};
+			};
+			id=337;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Zeus2";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item7
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={783.36505,5,3173.2437};
+			};
+			id=338;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Zeus1";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item8
+		{
+			dataType="Marker";
+			position[]={780.78931,5,3172.7686};
+			name="respawn_west";
+			text="Spawn";
+			type="mil_objective";
+			id=339;
+		};
+		class Item9
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=3;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={783.20599,5.0014391,3175.374};
+						angles[]={0,4.6889663,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_m320""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_mrds_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""1Rnd_HE_Grenade_shell""; " \n "this addWeapon ""rhs_weap_M136""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrier1_rgr""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add binoculars""; " \n "this addMagazine ""Laserbatteries""; " \n "this addWeapon ""Laserdesignator""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""Laserbatteries""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "this addItemToVest ""ACE_M84""; " \n "this addItemToVest ""HandGrenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""40xtra_1Rnd_40mm_mswhite"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToBackpack ""1Rnd_HE_Grenade_shell"";}; " \n "this addItemToBackpack ""UGL_FlareRed_F""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeBlue_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeRed_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeGreen_Grenade_shell"";}; " \n "this addItemToBackpack ""SmokeShellBlue""; " \n "this addItemToBackpack ""SmokeShellRed""; " \n "this addItemToBackpack ""SmokeShellGreen""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""G_Shades_Black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						name="Zeus4";
+						description="[SR A] Platoon HQ";
+						isPlayable=1;
+					};
+					id=346;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD',_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={784.20099,5.0014391,3175.9722};
+						angles[]={0,4.6889663,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierRF_rgr""; " \n "this addBackpack ""B_Kitbag_mcamo""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""CUP_NVG_PVS15_tan""; " \n "this addItemToUniform ""CUP_muzzle_snds_M16""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 8 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellBlue"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellRed"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellGreen"";}; " \n "this addItemToVest ""ACE_M84""; " \n "this addItemToVest ""HandGrenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 40 do {this addItemToBackpack ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 40 do {this addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 10 do {this addItemToBackpack ""ACE_fieldDressing"";}; " \n "for ""_i"" from 1 to 8 do {this addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 15 do {this addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToBackpack ""ACE_bloodIV"";}; " \n "for ""_i"" from 1 to 3 do {this addItemToBackpack ""ACE_bloodIV_500"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_bloodIV_250"";}; " \n "this addItemToBackpack ""ACE_bodyBag""; " \n "for ""_i"" from 1 to 10 do {this addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""ACE_morphine"";}; " \n "this addItemToBackpack ""ACE_surgicalKit""; " \n "this addItemToBackpack ""adv_aceCPR_AED""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[SR 1-1] Platoon Medic";
+						isPlayable=1;
+					};
+					id=351;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={784.21301,5.0014391,3174.7209};
+						angles[]={0,4.6889663,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						description="[SR 1-2] Platoon Marksman";
+						isPlayable=1;
+					};
+					id=349;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=347;
+		};
+		class Item10
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=2;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={781.12,5.0014391,3177.9932};
+						angles[]={0,3.1270714,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""CUP_smg_MP5A5""; " \n "this addPrimaryWeaponItem ""CUP_30Rnd_9x19_MP5""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_B_HeliPilotCoveralls""; " \n "this addVest ""V_TacVest_oli""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""CUP_30Rnd_9x19_MP5"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addHeadgear ""H_PilotHelmetHeli_O""; " \n "this addGoggles ""G_Aviator""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ItemWatch""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""WhiteHead_21"",""male03engb""] call BIS_fnc_setIdentity; " \n "}";
+						description="[Kestrel 1] Pilot";
+						isPlayable=1;
+					};
+					id=355;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={782.07898,5.0014391,3178.116};
+						angles[]={0,3.129009,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""CUP_smg_MP5A5""; " \n "this addPrimaryWeaponItem ""CUP_30Rnd_9x19_MP5""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_B_HeliPilotCoveralls""; " \n "this addVest ""V_TacVest_oli""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""CUP_30Rnd_9x19_MP5"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addHeadgear ""H_PilotHelmetHeli_O""; " \n "this addGoggles ""G_Aviator""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ItemWatch""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""WhiteHead_21"",""male03engb""] call BIS_fnc_setIdentity; " \n "}";
+						description="[Kestrel 2] Pilot Support";
+						isPlayable=1;
+					};
+					id=353;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=354;
+		};
+		class Item11
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={778.14301,5.0014391,3176.127};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_m320""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_mrds_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""1Rnd_HE_Grenade_shell""; " \n "this addWeapon ""rhs_weap_M136""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrier1_rgr""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add binoculars""; " \n "this addMagazine ""Laserbatteries""; " \n "this addWeapon ""Laserdesignator""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""Laserbatteries""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "this addItemToVest ""ACE_M84""; " \n "this addItemToVest ""HandGrenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""40xtra_1Rnd_40mm_mswhite"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToBackpack ""1Rnd_HE_Grenade_shell"";}; " \n "this addItemToBackpack ""UGL_FlareRed_F""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeBlue_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeRed_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeGreen_Grenade_shell"";}; " \n "this addItemToBackpack ""SmokeShellBlue""; " \n "this addItemToBackpack ""SmokeShellRed""; " \n "this addItemToBackpack ""SmokeShellGreen""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""G_Shades_Black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[WYVERN 1-A] SL";
+						isPlayable=1;
+					};
+					id=359;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={777.97699,5.0014391,3175.3171};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierRF_rgr""; " \n "this addBackpack ""B_Kitbag_mcamo""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""CUP_NVG_PVS15_tan""; " \n "this addItemToUniform ""CUP_muzzle_snds_M16""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 8 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellBlue"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellRed"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellGreen"";}; " \n "this addItemToVest ""ACE_M84""; " \n "this addItemToVest ""HandGrenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 40 do {this addItemToBackpack ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 40 do {this addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 10 do {this addItemToBackpack ""ACE_fieldDressing"";}; " \n "for ""_i"" from 1 to 8 do {this addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 15 do {this addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToBackpack ""ACE_bloodIV"";}; " \n "for ""_i"" from 1 to 3 do {this addItemToBackpack ""ACE_bloodIV_500"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_bloodIV_250"";}; " \n "this addItemToBackpack ""ACE_bodyBag""; " \n "for ""_i"" from 1 to 10 do {this addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""ACE_morphine"";}; " \n "this addItemToBackpack ""ACE_surgicalKit""; " \n "this addItemToBackpack ""adv_aceCPR_AED""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[WYVERN 1-1] Medic";
+						isPlayable=1;
+					};
+					id=361;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={777.815,5.0014391,3174.5352};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""CUP_lmg_Mk48""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""CUP_optic_MicroT1_low""; " \n "this addPrimaryWeaponItem ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_T_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierAR_rgr""; " \n "this addBackpack ""B_AssaultPack_mcamo""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""CUP_NVG_PVS15_tan""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""HandGrenade""; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M"";}; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "this addItemToVest ""ACE_M84""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M"";}; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[WYVERN 1-2] AutoRifleman";
+						isPlayable=1;
+					};
+					id=363;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={777.75897,5.0014391,3173.8281};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_m320""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""CUP_optic_CompM2_low""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addWeapon ""rhs_weap_M136""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrier1_rgr""; " \n "this addBackpack ""B_AssaultPack_cbr""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""MineDetector""; " \n "this addItemToVest ""ACE_M26_Clacker""; " \n "this addItemToVest ""ACE_DefusalKit""; " \n "for ""_i"" from 1 to 7 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 3 do {this addItemToBackpack ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""40xtra_1Rnd_40mm_mswhite"";}; " \n "for ""_i"" from 1 to 8 do {this addItemToBackpack ""1Rnd_HE_Grenade_shell"";}; " \n "this addItemToBackpack ""UGL_FlareRed_F""; " \n "this addItemToBackpack ""1Rnd_SmokeBlue_Grenade_shell""; " \n "this addItemToBackpack ""1Rnd_SmokeRed_Grenade_shell""; " \n "this addItemToBackpack ""DemoCharge_Remote_Mag""; " \n "this addItemToBackpack ""B_IR_Grenade""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[WYVERN 1-3] Grenadier";
+						isPlayable=1;
+					};
+					id=365;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD',_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={777.04303,5.0014391,3176.0491};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_m320""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_mrds_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""1Rnd_HE_Grenade_shell""; " \n "this addWeapon ""rhs_weap_M136""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrier1_rgr""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add binoculars""; " \n "this addMagazine ""Laserbatteries""; " \n "this addWeapon ""Laserdesignator""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""Laserbatteries""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "this addItemToVest ""ACE_M84""; " \n "this addItemToVest ""HandGrenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""40xtra_1Rnd_40mm_mswhite"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToBackpack ""1Rnd_HE_Grenade_shell"";}; " \n "this addItemToBackpack ""UGL_FlareRed_F""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeBlue_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeRed_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeGreen_Grenade_shell"";}; " \n "this addItemToBackpack ""SmokeShellBlue""; " \n "this addItemToBackpack ""SmokeShellRed""; " \n "this addItemToBackpack ""SmokeShellGreen""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""G_Shades_Black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[WYVERN 2-A] FTL";
+						isPlayable=1;
+					};
+					id=367;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={776.96002,5.0014391,3175.321};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""CUP_lmg_Mk48""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""CUP_optic_MicroT1_low""; " \n "this addPrimaryWeaponItem ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_T_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierAR_rgr""; " \n "this addBackpack ""B_AssaultPack_mcamo""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""CUP_NVG_PVS15_tan""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""HandGrenade""; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M"";}; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "this addItemToVest ""ACE_M84""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M"";}; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[WYVERN 2-1] AutoRifleman";
+						isPlayable=1;
+					};
+					id=369;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={776.85199,5.0014391,3174.584};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""CUP_launch_Javelin""; " \n "this addSecondaryWeaponItem ""CUP_Javelin_M""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierRF_rgr""; " \n "this addBackpack ""B_Kitbag_mcamo""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "this addItemToBackpack ""CUP_Javelin_M""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[WYVERN 2-2] Missile Specialist";
+						isPlayable=1;
+					};
+					id=371;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={776.82001,5.0014391,3173.834};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""rhs_weap_M136""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierRF_rgr""; " \n "this addBackpack ""B_AssaultPack_cbr""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity;}";
+						description="[WYVERN 2-3] Rifleman";
+						isPlayable=1;
+					};
+					id=373;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=358;
+		};
+		class Item12
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={783.0929,5,3175.2932};
+			};
+			id=374;
+			type="ModuleCurator_F";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ModuleCurator_F_Owner";
+					expression="_this setVariable ['Owner',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="Zeus4";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="ModuleCurator_F_Forced";
+					expression="_this setVariable ['Forced',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="ModuleCurator_F_Name";
+					expression="_this setVariable ['Name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="ModuleCurator_F_Addons";
+					expression="_this setVariable ['Addons',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				nAttributes=4;
+			};
+		};
+		class Item13
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=8;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={777.91199,5.0014391,3171.4641};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_m320""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_mrds_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""1Rnd_HE_Grenade_shell""; " \n "this addWeapon ""rhs_weap_M136""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrier1_rgr""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add binoculars""; " \n "this addMagazine ""Laserbatteries""; " \n "this addWeapon ""Laserdesignator""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""Laserbatteries""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "this addItemToVest ""ACE_M84""; " \n "this addItemToVest ""HandGrenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""40xtra_1Rnd_40mm_mswhite"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToBackpack ""1Rnd_HE_Grenade_shell"";}; " \n "this addItemToBackpack ""UGL_FlareRed_F""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeBlue_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeRed_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeGreen_Grenade_shell"";}; " \n "this addItemToBackpack ""SmokeShellBlue""; " \n "this addItemToBackpack ""SmokeShellRed""; " \n "this addItemToBackpack ""SmokeShellGreen""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""G_Shades_Black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[BRAVO 1-A] SL";
+						isPlayable=1;
+					};
+					id=376;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item1
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={777.74597,5.0014391,3170.6541};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierRF_rgr""; " \n "this addBackpack ""B_Kitbag_mcamo""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""CUP_NVG_PVS15_tan""; " \n "this addItemToUniform ""CUP_muzzle_snds_M16""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 8 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellBlue"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellRed"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""SmokeShellGreen"";}; " \n "this addItemToVest ""ACE_M84""; " \n "this addItemToVest ""HandGrenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 40 do {this addItemToBackpack ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 40 do {this addItemToBackpack ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 10 do {this addItemToBackpack ""ACE_fieldDressing"";}; " \n "for ""_i"" from 1 to 8 do {this addItemToBackpack ""ACE_tourniquet"";}; " \n "for ""_i"" from 1 to 15 do {this addItemToBackpack ""ACE_splint"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToBackpack ""ACE_bloodIV"";}; " \n "for ""_i"" from 1 to 3 do {this addItemToBackpack ""ACE_bloodIV_500"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""ACE_bloodIV_250"";}; " \n "this addItemToBackpack ""ACE_bodyBag""; " \n "for ""_i"" from 1 to 10 do {this addItemToBackpack ""ACE_epinephrine"";}; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""ACE_morphine"";}; " \n "this addItemToBackpack ""ACE_surgicalKit""; " \n "this addItemToBackpack ""adv_aceCPR_AED""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[BRAVO 1-1] Medic";
+						isPlayable=1;
+					};
+					id=377;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=2;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item2
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={777.58398,5.0014391,3169.8721};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""CUP_lmg_Mk48""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""CUP_optic_MicroT1_low""; " \n "this addPrimaryWeaponItem ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_T_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierAR_rgr""; " \n "this addBackpack ""B_AssaultPack_mcamo""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""CUP_NVG_PVS15_tan""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""HandGrenade""; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M"";}; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "this addItemToVest ""ACE_M84""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M"";}; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[BRAVO 1-2] AutoRifleman";
+						isPlayable=1;
+					};
+					id=378;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item3
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={777.52802,5.0014391,3169.165};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_m320""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""CUP_optic_CompM2_low""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addWeapon ""rhs_weap_M136""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrier1_rgr""; " \n "this addBackpack ""B_AssaultPack_cbr""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""MineDetector""; " \n "this addItemToVest ""ACE_M26_Clacker""; " \n "this addItemToVest ""ACE_DefusalKit""; " \n "for ""_i"" from 1 to 7 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 3 do {this addItemToBackpack ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""40xtra_1Rnd_40mm_mswhite"";}; " \n "for ""_i"" from 1 to 8 do {this addItemToBackpack ""1Rnd_HE_Grenade_shell"";}; " \n "this addItemToBackpack ""UGL_FlareRed_F""; " \n "this addItemToBackpack ""1Rnd_SmokeBlue_Grenade_shell""; " \n "this addItemToBackpack ""1Rnd_SmokeRed_Grenade_shell""; " \n "this addItemToBackpack ""DemoCharge_Remote_Mag""; " \n "this addItemToBackpack ""B_IR_Grenade""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[BRAVO 1-3] Grenadier";
+						isPlayable=1;
+					};
+					id=379;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ace_isEOD";
+							expression="_this setVariable ['ACE_isEOD',_value,true]";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"BOOL"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						nAttributes=3;
+					};
+				};
+				class Item4
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={776.81201,5.0014391,3171.386};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_m320""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_mrds_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""1Rnd_HE_Grenade_shell""; " \n "this addWeapon ""rhs_weap_M136""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_S_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrier1_rgr""; " \n "this addBackpack ""TFAR_rt1523g_sage""; " \n " " \n "comment ""Add binoculars""; " \n "this addMagazine ""Laserbatteries""; " \n "this addWeapon ""Laserdesignator""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""Laserbatteries""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "this addItemToVest ""ACE_M84""; " \n "this addItemToVest ""HandGrenade""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""40xtra_1Rnd_40mm_mswhite"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToBackpack ""1Rnd_HE_Grenade_shell"";}; " \n "this addItemToBackpack ""UGL_FlareRed_F""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeBlue_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeRed_Grenade_shell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""1Rnd_SmokeGreen_Grenade_shell"";}; " \n "this addItemToBackpack ""SmokeShellBlue""; " \n "this addItemToBackpack ""SmokeShellRed""; " \n "this addItemToBackpack ""SmokeShellGreen""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""G_Shades_Black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[BRAVO 2-A] FTL";
+						isPlayable=1;
+					};
+					id=380;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ace_isMedic";
+							expression="if (_value != -1 && {_value != (parseNumber (_this getUnitTrait 'medic'))}) then {_this setVariable [""ace_medical_medicClass"", _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="ace_isEngineer";
+							expression="if !(_value == ([0,1] select (_this getUnitTrait 'engineer'))|| {_value == -1}) then {_this setVariable ['ace_isEngineer', _value, true]}";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=4;
+					};
+				};
+				class Item5
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={776.729,5.0014391,3170.658};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""CUP_lmg_Mk48""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""CUP_optic_MicroT1_low""; " \n "this addPrimaryWeaponItem ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_T_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierAR_rgr""; " \n "this addBackpack ""B_AssaultPack_mcamo""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""CUP_NVG_PVS15_tan""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""HandGrenade""; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M"";}; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "this addItemToVest ""ACE_M84""; " \n "for ""_i"" from 1 to 2 do {this addItemToBackpack ""CUP_100Rnd_TE4_LRT4_White_Tracer_762x51_Belt_M"";}; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[BRAVO 2-1] AutoRifleman";
+						isPlayable=1;
+					};
+					id=381;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item6
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={776.62097,5.0014391,3169.9211};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""CUP_launch_Javelin""; " \n "this addSecondaryWeaponItem ""CUP_Javelin_M""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierRF_rgr""; " \n "this addBackpack ""B_Kitbag_mcamo""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "this addItemToBackpack ""CUP_Javelin_M""; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity; " \n "}";
+						description="[BRAVO 2-2] Missile Specialist";
+						isPlayable=1;
+					};
+					id=382;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+				class Item7
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={776.58899,5.0014391,3169.1711};
+						angles[]={0,1.505329,0};
+					};
+					side="West";
+					flags=5;
+					class Attributes
+					{
+						init="call{comment ""Remove existing items""; " \n "removeAllWeapons this; " \n "removeAllItems this; " \n "removeAllAssignedItems this; " \n "removeUniform this; " \n "removeVest this; " \n "removeBackpack this; " \n "removeHeadgear this; " \n "removeGoggles this; " \n " " \n "comment ""Add weapons""; " \n "this addWeapon ""rhs_weap_hk416d10_grip3""; " \n "this addPrimaryWeaponItem ""CUP_acc_LLM_black""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_su230_3d""; " \n "this addPrimaryWeaponItem ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "this addPrimaryWeaponItem ""rhsusf_acc_kac_grip""; " \n "this addWeapon ""rhs_weap_M136""; " \n "this addWeapon ""rhsusf_weap_glock17g4""; " \n "this addHandgunItem ""rhsusf_mag_17Rnd_9x19_FMJ""; " \n " " \n "comment ""Add containers""; " \n "this forceAddUniform ""U_mas_ukl_B_CombatUniform_mtp""; " \n "this addVest ""V_mas_ukl_PlateCarrierRF_rgr""; " \n "this addBackpack ""B_AssaultPack_cbr""; " \n " " \n "comment ""Add binoculars""; " \n "this addWeapon ""Rangefinder""; " \n " " \n "comment ""Add items to containers""; " \n "this addItemToUniform ""ACE_Flashlight_XL50""; " \n "this addItemToUniform ""ACE_microDAGR""; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_elasticBandage"";}; " \n "for ""_i"" from 1 to 4 do {this addItemToUniform ""ACE_packingBandage"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_fieldDressing"";}; " \n "this addItemToUniform ""ACE_EarPlugs""; " \n "this addItemToUniform ""ACE_CableTie""; " \n "for ""_i"" from 1 to 2 do {this addItemToUniform ""ACE_IR_Strobe_Item"";}; " \n "this addItemToUniform ""ACE_morphine""; " \n "for ""_i"" from 1 to 3 do {this addItemToUniform ""ACE_tourniquet"";}; " \n "this addItemToUniform ""ACE_splint""; " \n "this addItemToUniform ""B_IR_Grenade""; " \n "this addItemToUniform ""rhs_mag_30Rnd_556x45_Mk318_PMAG""; " \n "for ""_i"" from 1 to 6 do {this addItemToVest ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""rhsusf_mag_17Rnd_9x19_FMJ"";}; " \n "this addItemToVest ""SmokeShellBlue""; " \n "this addItemToVest ""SmokeShellRed""; " \n "this addItemToVest ""SmokeShellGreen""; " \n "for ""_i"" from 1 to 3 do {this addItemToVest ""SmokeShell"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""ACE_M84"";}; " \n "for ""_i"" from 1 to 2 do {this addItemToVest ""HandGrenade"";}; " \n "this addItemToBackpack ""CUP_NVG_PVS15_tan""; " \n "this addItemToBackpack ""CUP_muzzle_snds_M16""; " \n "for ""_i"" from 1 to 5 do {this addItemToBackpack ""rhs_mag_30Rnd_556x45_Mk318_PMAG"";}; " \n "this addHeadgear ""H_mas_ukl_opscorn""; " \n "this addGoggles ""rhs_ess_black""; " \n " " \n "comment ""Add items""; " \n "this linkItem ""ItemMap""; " \n "this linkItem ""ItemCompass""; " \n "this linkItem ""ACE_Altimeter""; " \n "this linkItem ""TFAR_anprc152""; " \n "this linkItem ""ItemGPS""; " \n " " \n "comment ""Set identity""; " \n "[this,""LivonianHead_3"",""ace_novoice""] call BIS_fnc_setIdentity;}";
+						description="[BRAVO 2-3] Rifleman";
+						isPlayable=1;
+					};
+					id=383;
+					type="B_Soldier_VR_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENGVR";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=0.95999998;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=375;
+		};
+		class Item14
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={781.92102,8.9768047,3167.1699};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this addaction [""Use Teleporter"",""carrierjump.sqf""];}";
+				name="TeleporterSend";
+			};
+			id=384;
+			type="FlagCarrierRedCrystal_EP1";
+		};
+		class Item15
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={781.927,8.9768047,3168.2461};
+				angles[]={0,0.017243853,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="call{this addAction[""<t color='#ff9900'>Use Halo Jump</t>"", ""ATM_airdrop\atm_airdrop.sqf""]}";
+				name="HeloDrop";
+			};
+			id=389;
+			type="FlagCarrierRedCross_EP1";
+		};
+		class Item16
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={780.047,5.1867056,3172.519};
+				angles[]={0,4.7423215,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=440;
+			type="ACE_Box_Chemlights";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""rhs_weap_M136""],[5]],[[""1Rnd_HE_Grenade_shell"",""rhs_mag_30Rnd_556x45_M855A1_PMAG_Tracer_Red"",""rhs_mag_30Rnd_556x45_Mk318_PMAG"",""rhsusf_mag_17Rnd_9x19_FMJ"",""HandGrenade"",""SmokeShellYellow"",""SmokeShellGreen"",""SmokeShellRed"",""SmokeShellPurple"",""SmokeShellOrange"",""SmokeShellBlue"",""ACE_M84"",""B_IR_Grenade""],[20,10,30,20,10,10,10,10,10,10,10,5,10]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item17
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={780.15924,5,3174.3557};
+				angles[]={-0,1.5771849,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=441;
+			type="ACE_medicalSupplyCrate_advanced";
+		};
+	};
+	class Connections
+	{
+		class LinkIDProvider
+		{
+			nextID=4;
+		};
+		class Links
+		{
+			items=4;
+			class Item0
+			{
+				linkID=0;
+				item0=338;
+				item1=343;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item1
+			{
+				linkID=1;
+				item0=337;
+				item1=344;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item2
+			{
+				linkID=2;
+				item0=336;
+				item1=345;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item3
+			{
+				linkID=3;
+				item0=374;
+				item1=346;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+		};
+	};
+};

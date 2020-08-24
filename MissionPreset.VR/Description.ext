@@ -1,0 +1,92 @@
+respawn = "BASE";
+respawndelay = 3;
+author = "Tetlys"
+briefingName = "Mission Template";
+onLoadMission = "Mission Template";
+onLoadIntro = "Welcome to the operation, prepare to be zeused";
+onLoadIntroTime = 1; // 0: disabled - 1: enabled. Default: 0
+
+disabledAI = 1;
+enableDebugConsole = 0;
+
+class Header
+{
+	gameType =  COOP;	// Game type
+	minPlayers =  1;	// minimum number of players the mission supports
+	maxPlayers = 50;	// maximum number of players the mission supports
+};
+	
+#include "ATM_airdrop\dialog.hpp"
+
+class CfgSounds
+{
+	class murmur
+	{
+		name = "murmur"; // Name for mission editor
+		sound[] = {\Sound\murmur.ogg, 0.8, 1.0};
+		titles[] = {0, ""};
+	};
+	class geiger
+	{
+		name = "geiger"; // Name for mission editor
+		sound[] = {\Sound\geiger.ogg, .7, 1.0};
+		titles[] = {0, ""};
+	};
+	class spark1
+	{
+		name = "spark1";
+		sound[] = {"\Sound\spark1.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark11
+	{
+		name = "spark11";
+		sound[] = {"\Sound\spark11.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark2
+	{
+		name = "spark2";
+		sound[] = {"\Sound\spark2.ogg", db+5, 1};
+		titles[] = {};
+	};		
+	class spark22
+	{
+		name = "spark22";
+		sound[] = {"\Sound\spark22.ogg", db+5, 1};
+		titles[] = {};
+	};	
+	class spark3	
+	{
+		name = "spark3";
+		sound[] = {"\Sound\spark3.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark4	
+	{
+		name = "spark4";
+		sound[] = {"\Sound\spark4.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class spark5	
+	{
+		name = "spark5";
+		sound[] = {"\Sound\spark5.ogg", db+5, 1};
+		titles[] = {};
+	};
+	class earthquake_02
+	{
+		name = "earthquake_02";
+		sound[] = {"\sound\earthquake_02.ogg",0.7, 1};
+		titles[] = {1, ""};
+	};	
+	class tiuit
+	{
+		name = "tiuit"; // Name for mission editor
+		sound[] = {\Sound\tiuit.ogg, 0.2, 1.0};
+		titles[] = {0, ""};	
+	};
+	class Vent {name="Vent";sound[]={ATM_airdrop\data\Vent.ogg,db-11,1.0};titles[] = {};};
+	class Vent2 {name="Vent2";sound[]={ATM_airdrop\data\Vent2.ogg,db-11,1.0};titles[] = {};};
+	class Para {name="Para";sound[]={ATM_airdrop\data\parachute.ogg,db-11,1.0};titles[] = {};};
+};
